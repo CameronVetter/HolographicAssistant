@@ -70,7 +70,7 @@ public class Assistant : MonoBehaviour
         };
 
         StartCoroutine(rest
-            .SetBaseUrl("<INSERT BACKEND URL HERE>")
+            .SetBaseUrl("http://127.0.0.1:5000/")
             .ResourceAt("chat")
             .Post(new RestBody(json), response =>
                 {
