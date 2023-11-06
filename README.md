@@ -1,20 +1,64 @@
 # Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+This repo is part of a Workshop and may not be very useful if you are not currently in that workshop! 
+
+# Prerequisites
+- You should have completed the [Holographic Assistant Server](https://github.com/CameronVetter/HolographicAssistantServer) exercises and have the server running locally in the background
 
 # Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+1. Clone this repo. 
+2. This folder contains the completed solution, this time **YOU WILL** start here.
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+# Setup Unity + VS Code integration
+1. Open Unity with this folder as the project.
+2. In Unity Hub Click Add and select the "HolographicAssistant" folder.
+3. Click once on this entry in the list to open it.  (NOTE: If you did not install the exact version in the prerequisites this will take much longer to load but will PROBABLY work fine.)
+4. Select the edit menu and preferences.
+5. Select External Tools and select visual studio code.
+6. Close this window.
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+# Looking Glass users ONLY
+1. Make sure to run Looking Glass Bridge before opening the scene.
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+# Exercise 1
+1. Open the scene for this project.  In the Project Pane, find the scenes folder and select Assistant
+
+![image](https://github.com/CameronVetter/HolographicAssistant/blob/main/images/selectscene.png?raw=true)
+
+2. This scene opens and is ready to go press play!
+3. If you see the elephant display on your looking glass and look 3D you are ready to go.
+4. If you do not see him on your looking glass adjust the settings on the Holoplay Capture Object in the scene.  They should match these settings, but your target display may be different.
+
+![image](https://github.com/CameronVetter/HolographicAssistant/blob/main/images/lookingglasssettings.png?raw=true)
+
+# Non Looking Glass users ONLY
+
+1. We will adjust the settings to display in 2d mode on your normal screen.
+2. Open the Holoplay Capture Object as shown above. Select the Check box for Preview 2d.
+3. Play the scene
+4. If the scene is streteched which it likely is, select the resultion dropdown and select the Looking Glass Portrait resolution here:
+
+![image](https://github.com/CameronVetter/HolographicAssistant/blob/main/images/resolution.png?raw=true)
+
+5. Based on your install / configuration you may not have this resolution, but you can create a custom resolution of 1536 x 2048
+
+# Connecting to Azure Speech
+1. In the project pane open the scripts folder.
+2. Double click Speech.cs from this pane and VS Code should open.
+3. There is a place for your subscriiption key and region near the top of this file.  Replace these with your values.
+4. To create your own subscription, go to the Azure portal. https://portal.azure.com
+5. Select Create a Resource and search for Speech.
+6. Click create and follow the wizard, East Us and Free tier are recommended for this exercise.
+7. Open the created resource and look under "Keys and Endpoint" and you will find the key and region to use in speech.cs
+8. Open recognize.cs and set the key and region there as well.
+9. Make sure to save your files and close vs code.
+
+# Try your assistant
+1. Play the scene.
+2. With the preview in focus, press the space and say hello to your assistant!
+3. If you have been successful she will spin ridiculously while she is thinking and verbally reply.
+
+# Extra
+1. Have a conversation with her.
+2. Explore the limitations of her short term memory.
+3. Don't forget to ask questions that use her tools.
+4. Watch the debug window of the service as she is thinking!
